@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>راهکارهای نوین تأمین برق در شرایط بی برقی</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+            color: #2c3e50;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .poster-container {
+            width: 720px;
+            min-height: 960px;
+            margin: 0 auto;
+            padding: 40px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .background-accent {
+            position: absolute;
+            border-radius: 50%;
+            z-index: 0;
+        }
+        
+        .accent-1 {
+            top: -200px;
+            right: -200px;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(66,133,244,0.15) 0%, rgba(66,133,244,0) 70%);
+        }
+        
+        .accent-2 {
+            bottom: -100px;
+            left: -200px;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(251,188,4,0.1) 0%, rgba(251,188,4,0) 70%);
+        }
+        
+        .accent-3 {
+            top: 50%;
+            right: -100px;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(52,168,83,0.1) 0%, rgba(52,168,83,0) 70%);
+        }
+        
+        .grid-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+            z-index: 0;
+        }
+        
+        .content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        
+        .header-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #4285f4 0%, #1a73e8 100%);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            box-shadow: 0 10px 30px rgba(66,133,244,0.3);
+            margin-bottom: 20px;
+            transform: translateY(0);
+            transition: all 0.3s ease;
+        }
+        
+        .header-badge:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(66,133,244,0.4);
+        }
+        
+        .header h1 {
+            font-size: 36px;
+            font-weight: 700;
+            margin: 0;
+            line-height: 1.3;
+        }
+        
+        .header h2 {
+            font-size: 22px;
+            font-weight: 500;
+            margin: 15px 0 20px;
+            color: #5f6368;
+        }
+        
+        .header-image-container {
+            position: relative;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        
+        .header-image-container::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            left: -10px;
+            bottom: -10px;
+            background: linear-gradient(135deg, #4285f4 0%, #1a73e8 100%);
+            border-radius: 15px;
+            z-index: -1;
+            opacity: 0.8;
+        }
+        
+        .header-image {
+            width: 280px;
+            height: auto;
+            border-radius: 10px;
+            display: block;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        .section {
+            margin-bottom: 30px;
+            position: relative;
+        }
+        
+        .section-title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .section-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 15px;
+            flex-shrink: 0;
+        }
+        
+        .section-icon .material-icons {
+            font-size: 28px;
+            color: white;
+        }
+        
+        .section-title h3 {
+            font-size: 24px;
+            font-weight: 700;
+            margin: 0;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            padding: 25px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+        }
+        
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 5px;
+            height: 100%;
+        }
+        
+        .company-card .card::before {
+            background: linear-gradient(to bottom, #4285f4, #1a73e8);
+        }
+        
+        .problem-card .card::before {
+            background: linear-gradient(to bottom, #ea4335, #d33b2c);
+        }
+        
+        .solution-card .card::before {
+            background: linear-gradient(to bottom, #34a853, #2d7d42);
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        
+        .benefit-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            padding: 20px;
+            display: flex;
+            align-items: flex-start;
+            transition: all 0.3s ease;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+        }
+        
+        .benefit-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 15px;
+            flex-shrink: 0;
+        }
+        
+        .benefit-icon .material-icons {
+            font-size: 24px;
+            color: white;
+        }
+        
+        .benefit-content h4 {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 0 0 8px 0;
+            color: #202124;
+        }
+        
+        .benefit-content p {
+            margin: 0;
+            font-size: 14px;
+            color: #5f6368;
+        }
+        
+        .inverter-section {
+            margin-bottom: 30px;
+        }
+        
+        .inverter-description {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            padding: 25px;
+            margin-bottom: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .inverter-description::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 5px;
+            height: 100%;
+        }
+        
+        .hybrid-description::before {
+            background: linear-gradient(to bottom, #9c27b0, #7b1fa2);
+        }
+        
+        .offgrid-description::before {
+            background: linear-gradient(to bottom, #f44336, #d32f2f);
+        }
+        
+        .inverter-cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        
+        .inverter-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .inverter-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+        }
+        
+        .inverter-card-header {
+            padding: 15px 20px;
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+        
+        .inverter-card-number {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 10px;
+            font-size: 16px;
+        }
+        
+        .inverter-card-body {
+            padding: 20px;
+        }
+        
+        .inverter-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .feature-list {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .feature-list li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 10px;
+            font-size: 15px;
+            color: #5f6368;
+        }
+        
+        .feature-list .material-icons {
+            font-size: 18px;
+            margin-left: 8px;
+            color: #4285f4;
+            flex-shrink: 0;
+        }
+        
+        .comparison-table {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+        
+        .comparison-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .comparison-table th {
+            padding: 15px;
+            text-align: center;
+            font-weight: 600;
+            color: white;
+            font-size: 16px;
+        }
+        
+        .comparison-table td {
+            padding: 15px;
+            text-align: center;
+            font-size: 15px;
+            border-bottom: 1px solid #f1f3f4;
+        }
+        
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        .tag {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .tag-yes {
+            background-color: #e6f4ea;
+            color: #137333;
+        }
+        
+        .tag-no {
+            background-color: #fce8e6;
+            color: #d93025;
+        }
+        
+        .tag-medium {
+            background-color: #fef7e0;
+            color: #b06000;
+        }
+        
+        .tag-low {
+            background-color: #e8f0fe;
+            color: #185abc;
+        }
+        
+        .contact-section {
+            background: linear-gradient(135deg, #4285f4 0%, #1a73e8 100%);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(66,133,244,0.3);
+            padding: 30px;
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact-section::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 150px;
+            height: 150px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+        }
+        
+        .contact-section::after {
+            content: '';
+            position: absolute;
+            bottom: -30px;
+            left: -30px;
+            width: 100px;
+            height: 100px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+        }
+        
+        .contact-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .contact-subtitle {
+            font-size: 16px;
+            margin-bottom: 25px;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 25px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            background: rgba(255,255,255,0.15);
+            padding: 10px 20px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-item:hover {
+            background: rgba(255,255,255,0.25);
+            transform: translateY(-3px);
+        }
+        
+        .contact-item .material-icons {
+            font-size: 20px;
+            margin-left: 8px;
+        }
+        
+        .contact-text {
+            font-size: 15px;
+        }
+        
+        .cta-button {
+            background: white;
+            color: #4285f4;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255,255,255,0.2);
+            display: inline-flex;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255,255,255,0.3);
+        }
+        
+        .cta-button .material-icons {
+            margin-left: 8px;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .poster-container {
+                width: 100%;
+                padding: 20px;
+            }
+            
+            .benefits-grid,
+            .inverter-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="poster-container">
+        <div class="background-accent accent-1"></div>
+        <div class="background-accent accent-2"></div>
+        <div class="background-accent accent-3"></div>
+        <div class="grid-pattern"></div>
+        
+        <div class="content">
+            <!-- Header Section -->
+            <header class="header">
+                <div class="header-badge">
+                    <h1>راهکارهای نوین تأمین برق در شرایط بی برقی</h1>
+                </div>
+                <h2>با اینورترهای هیبریدی و آف گرید</h2>
+                <div class="header-image-container">
+                    <img src="https://sfile.chatglm.cn/images-ppt/d8fb3b82ed45.jpg" alt="اینورتر خورشیدی هیبریدی" class="header-image">
+                </div>
+            </header>
+            
+            <!-- Company Introduction -->
+            <section class="section company-card">
+                <div class="section-title">
+                    <div class="section-icon" style="background: linear-gradient(135deg, #4285f4 0%, #1a73e8 100%);">
+                        <i class="material-icons">business</i>
+                    </div>
+                    <h3>معرفی شرکت پویش نیرو</h3>
+                </div>
+                <div class="card">
+                    <p>شرکت پویش نیرو پایا از سال ۱۳۷۶ فعالیت حرفه‌ای خود را با تمرکز بر تأمین و فروش تجهیزات پیشرفته اتوماسیون صنعتی، سیستم‌های کنترل دور موتور (اینورتر) و سیستم‌های خورشیدی آغاز کرده است. این شرکت با ارائه راهکارهای نوین در زمینه انرژی‌های تجدیدپذیر، به ویژه سیستم‌های خورشیدی، یکی از پیشگامان این صنعت در ایران محسوب می‌شود.</p>
+                </div>
+            </section>
+            
+            <!-- Problem & Solution Section -->
+            <section class="section">
+                <div class="section-title">
+                    <div class="section-icon" style="background: linear-gradient(135deg, #ea4335 0%, #d33b2c 100%);">
+                        <i class="material-icons">warning</i>
+                    </div>
+                    <h3>چالش بی برقی و راهکارهای نوین</h3>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+                    <div class="card problem-card">
+                        <h4 style="color: #ea4335; font-size: 18px; font-weight: 600; margin-bottom: 10px;">چالش بی برقی</h4>
+                        <p>قطعی برق یکی از بزرگترین چالش‌های در صنعت و مصارف خانگی است که می‌تواند باعث اختلال در فعالیت‌های روزمره و خسارات اقتصادی شود. راهکارهای سنتی مانند ژنراتورهای دیزلی با مشکلاتی مانند آلودگی محیط زیست، صدای زیاد و هزینه‌های نگهداری بالا همراه هستند.</p>
+                    </div>
+                    
+                    <div class="card solution-card">
+                        <h4 style="color: #34a853; font-size: 18px; font-weight: 600; margin-bottom: 10px;">راهکارهای نوین</h4>
+                        <p>اینورترهای خورشیدی هیبریدی و آف گرید راهکارهای نوین، پاک و اقتصادی برای تأمین برق پایدار در شرایط بی برقی ارائه می‌دهند. این سیستم‌ها با استفاده از انرژی خورشیدی، استقلال انرژی را تضمین کرده و هزینه‌های انرژی را به طور چشمگیری کاهش می‌دهند.</p>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin: 20px 0;">
+                    <img src="https://sfile.chatglm.cn/images-ppt/f8eb67aaafb2.jpg" alt="سیستم تأمین برق خورشیدی" style="width: 90%; height: auto; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.15);">
+                </div>
+            </section>
+            
+            <!-- Benefits Section -->
+            <section class="section">
+                <div class="section-title">
+                    <div class="section-icon" style="background: linear-gradient(135deg, #fbbc04 0%, #f9ab00 100%);">
+                        <i class="material-icons">stars</i>
+                    </div>
+                    <h3>مزایای استفاده از اینورترهای خورشیدی</h3>
+                </div>
+                
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon" style="background: linear-gradient(135deg, #4285f4 0%, #1a73e8 100%);">
+                            <i class="material-icons">wb_sunny</i>
+                        </div>
+                        <div class="benefit-content">
+                            <h4>انرژی پاک و تجدیدپذیر</h4>
+                            <p>استفاده از انرژی خورشیدی به عنوان منبع پاک و تجدیدپذیر، کاهش آلودگی محیط زیست</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon" style="background: linear-gradient(135deg, #34a853 0%, #2d7d42 100%);">
+                            <i class="material-icons">savings</i>
+                        </div>
+                        <div class="benefit-content">
+                            <h4>صرفه‌جویی در هزینه‌ها</h4>
+                            <p>کاهش چشمگیر هزینه‌های برق در بلندمدت و بازگشت سریع سرمایه</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon" style="background: linear-gradient(135deg, #fbbc04 0%, #f9ab00 100%);">
+                            <i class="material-icons">battery_charging_full</i>
+                        </div>
+                        <div class="benefit-content">
+                            <h4>استقلال انرژی</h4>
+                            <p>تأمین برق مستقل از شبکه شهری و مقاومت در برابر قطعی‌های برق</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-icon" style="background: linear-gradient(135deg, #ea4335 0%, #d33b2c 100%);">
+                            <i class="material-icons">verified</i>
+                        </div>
+                        <div class="benefit-content">
+                            <h4>قابلیت اطمینان بالا</h4>
+                            <p>عملکرد پایدار و قابل اعتماد در شرایط مختلف آب و هوایی</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Hybrid Inverters Section -->
+            <section class="section inverter-section">
+                <div class="section-title">
+                    <div class="section-icon" style="background: linear-gradient(135deg, #9c27b0 0%, #7b1fa2 100%);">
+                        <i class="material-icons">electrical_services</i>
+                    </div>
+                    <h3>اینورترهای هیبریدی</h3>
+                </div>
+                
+                <div class="inverter-description hybrid-description">
+                    <p>اینورترهای هیبریدی ترکیبی از دو نوع آف‌گرید و آن‌گرید هستند و قابلیت اتصال هم‌زمان به پنل خورشیدی، باتری و شبکه برق شهری را دارند. این اینورترها می‌توانند انرژی خورشیدی اضافی را به باتری شارژ کنند و در شرایط بی برقی از انرژی ذخیره شده استفاده کنند.</p>
+                </div>
+                
+                <div class="inverter-cards">
+                    <div class="inverter-card">
+                        <div class="inverter-card-header" style="background: linear-gradient(135deg, #9c27b0 0%, #7b1fa2 100%);">
+                            <div class="inverter-card-number">1</div>
+                            اینورتر خورشیدی هیبریدی ویچی سری SIS1
+                        </div>
+                        <div class="inverter-card-body">
+                            <img src="https://sfile.chatglm.cn/images-ppt/2444ca10d36e.jpg" alt="اینورتر خورشیدی هیبریدی SIS1" class="inverter-image">
+                            <ul class="feature-list">
+                                <li><i class="material-icons">check_circle</i> توان‌های 5.6 و 6 کیلووات</li>
+                                <li><i class="material-icons">check_circle</i> قابلیت کار بدون باتری در صورت وجود انرژی خورشیدی یا برق شهری</li>
+                                <li><i class="material-icons">check_circle</i> اتصال Wi-Fi و GPRS برای مانیتورینگ از راه دور</li>
+                                <li><i class="material-icons">check_circle</i> خروجی سینوسی خالص</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="inverter-card">
+                        <div class="inverter-card-header" style="background: linear-gradient(135deg, #9c27b0 0%, #7b1fa2 100%);">
+                            <div class="inverter-card-number">2</div>
+                            اینورتر هیبریدی خورشیدی ویچی سری SISV
+                        </div>
+                        <div class="inverter-card-body">
+                            <img src="https://sfile.chatglm.cn/images-ppt/a9873c1b90f5.jpg" alt="اینورتر خورشیدی هیبریدی SISV" class="inverter-image">
+                            <ul class="feature-list">
+                                <li><i class="material-icons">check_circle</i> مناسب برای سیستم‌های خانگی و نیمه‌صنعتی</li>
+                                <li><i class="material-icons">check_circle</i> مدیریت هوشمند انرژی بدون اختلال</li>
+                                <li><i class="material-icons">check_circle</i> نمایشگر رنگی و نظارت لحظه‌ای</li>
+                                <li><i class="material-icons">check_circle</i> کنترل از طریق اپلیکیشن‌های iOS و Android</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Off-Grid Inverters Section -->
+            <section class="section inverter-section">
+                <div class="section-title">
+                    <div class="section-icon" style="background: linear-gradient(135deg, #f44336 0%, #d32f2f 100%);">
+                        <i class="material-icons">power_off</i>
+                    </div>
+                    <h3>اینورترهای آف گرید</h3>
+                </div>
+                
+                <div class="inverter-description offgrid-description">
+                    <p>اینورترهای آف گرید (Off-grid) دستگاه‌هایی هستند که برق تولید شده توسط پنل‌های خورشیدی را به برق AC تبدیل می‌کنند و برای مصارف خانگی در مناطق بدون دسترسی به شبکه برق یا در شرایط بی برقی ایده‌آل هستند.</p>
+                </div>
+                
+                <div class="inverter-cards">
+                    <div class="inverter-card">
+                        <div class="inverter-card-header" style="background: linear-gradient(135deg, #f44336 0%, #d32f2f 100%);">
+                            <div class="inverter-card-number">1</div>
+                            اینورتر خورشیدی آف گرید ویچی سری SIS 3kW/5kW
+                        </div>
+                        <div class="inverter-card-body">
+                            <img src="https://sfile.chatglm.cn/images-ppt/058949745e7a.jpg" alt="اینورتر خورشیدی آف گرید SIS 3kW/5kW" class="inverter-image">
+                            <ul class="feature-list">
+                                <li><i class="material-icons">check_circle</i> مدل 3kW: حداکثر توان PV توصیه‌شده 3.6kW</li>
+                                <li><i class="material-icons">check_circle</i> مدل 5kW: حداکثر توان PV توصیه‌شده 6kW</li>
+                                <li><i class="material-icons">check_circle</i> حداکثر ولتاژ ورودی: 1100V</li>
+                                <li><i class="material-icons">check_circle</i> ولتاژ راه‌اندازی/حداقل ولتاژ عملیاتی: 50V/40V</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="inverter-card">
+                        <div class="inverter-card-header" style="background: linear-gradient(135deg, #f44336 0%, #d32f2f 100%);">
+                            <div class="inverter-card-number">2</div>
+                            اینورتر خورشیدی آف گرید ویچی سری SIS4
+                        </div>
+                        <div class="inverter-card-body">
+                            <img src="https://sfile.chatglm.cn/images-ppt/4f29dcbbdf77.jpg" alt="اینورتر خورشیدی آف گرید SIS4" class="inverter-image">
+                            <ul class="feature-list">
+                                <li><i class="material-icons">check_circle</i> قابلیت کار با ورودی AC و DC برای عملکرد پیوسته</li>
+                                <li><i class="material-icons">check_circle</i> مناسب برای مصارف خانگی و صنعتی</li>
+                                <li><i class="material-icons">check_circle</i> نمایشگر دیجیتال برای نظارت بر عملکرد</li>
+                                <li><i class="material-icons">check_circle</i> سیستم حفاظت چندگانه برای ایمنی بالا</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Comparison Section -->
+            <section class="section">
+                <div class="section-title">
+                    <div class="section-icon" style="background: linear-gradient(135deg, #4285f4 0%, #1a73e8 100%);">
+                        <i class="material-icons">compare</i>
+                    </div>
+                    <h3>مقایسه و انتخاب مناسب</h3>
+                </div>
+                
+                <div class="comparison-table">
+                    <table>
+                        <tr>
+                            <th style="background: #4285f4;">ویژگی</th>
+                            <th style="background: #9c27b0;">اینورتر هیبریدی</th>
+                            <th style="background: #f44336;">اینورتر آف گرید</th>
+                        </tr>
+                        <tr>
+                            <td>اتصال به شبکه برق شهری</td>
+                            <td><span class="tag tag-yes">دارد</span></td>
+                            <td><span class="tag tag-no">ندارد</span></td>
+                        </tr>
+                        <tr>
+                            <td>قابلیت فروش برق مازاد به شبکه</td>
+                            <td><span class="tag tag-yes">دارد</span></td>
+                            <td><span class="tag tag-no">ندارد</span></td>
+                        </tr>
+                        <tr>
+                            <td>مناسب برای مناطق با دسترسی به شبکه برق</td>
+                            <td><span class="tag tag-yes">✓</span></td>
+                            <td><span class="tag tag-no">-</span></td>
+                        </tr>
+                        <tr>
+                            <td>مناسب برای مناطق بدون دسترسی به شبکه برق</td>
+                            <td><span class="tag tag-no">-</span></td>
+                            <td><span class="tag tag-yes">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td>هزینه اولیه</td>
+                            <td><span class="tag tag-medium">بالاتر</span></td>
+                            <td><span class="tag tag-low">پایین‌تر</span></td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+            
+            <!-- Contact Section -->
+            <section class="section">
+                <div class="contact-section">
+                    <h3 class="contact-title">اطلاعات تماس و سفارش</h3>
+                    <p class="contact-subtitle">برای دریافت مشاوره رایگان و انتخاب بهترین راهکار تأمین برق اضطراری، با کارشناسان ما تماس بگیرید.</p>
+                    
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="material-icons">language</i>
+                            <span class="contact-text">pooyeshniroo.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="material-icons">phone</i>
+                            <span class="contact-text">۰۲۱-۸۸۹۵۰۰۰۰</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="material-icons">email</i>
+                            <span class="contact-text">info@pooyeshniroo.com</span>
+                        </div>
+                    </div>
+                    
+                    <button class="cta-button">
+                        <i class="material-icons">support_agent</i>
+                        درخواست مشاوره رایگان
+                    </button>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
