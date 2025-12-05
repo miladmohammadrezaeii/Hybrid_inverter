@@ -15,8 +15,8 @@
         
         body {
             font-family: 'Vazirmatn', sans-serif;
-            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
-            color: #2c3e50;
+            background: #121212;
+            color: #ffffff;
             line-height: 1.6;
             overflow-x: hidden;
         }
@@ -26,7 +26,7 @@
             min-height: 960px;
             margin: 0 auto;
             padding: 40px;
-            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+            background: #121212;
             position: relative;
             overflow: hidden;
         }
@@ -68,8 +68,8 @@
             width: 100%;
             height: 100%;
             background-image: 
-                linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px);
+                linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
             background-size: 20px 20px;
             z-index: 0;
         }
@@ -81,7 +81,7 @@
         
         .header {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
             position: relative;
         }
         
@@ -89,8 +89,8 @@
             display: inline-block;
             background: linear-gradient(135deg, #4285f4 0%, #1a73e8 100%);
             color: white;
-            padding: 15px 40px;
-            border-radius: 50px;
+            padding: 20px 50px;
+            border-radius: 8px;
             box-shadow: 0 10px 30px rgba(66,133,244,0.3);
             margin-bottom: 20px;
             transform: translateY(0);
@@ -103,23 +103,23 @@
         }
         
         .header h1 {
-            font-size: 36px;
+            font-size: 38px;
             font-weight: 700;
             margin: 0;
             line-height: 1.3;
         }
         
         .header h2 {
-            font-size: 22px;
+            font-size: 24px;
             font-weight: 500;
             margin: 15px 0 20px;
-            color: #5f6368;
+            color: #e0e0e0;
         }
         
         .header-image-container {
             position: relative;
             display: inline-block;
-            margin-top: 10px;
+            margin-top: 20px;
         }
         
         .header-image-container::before {
@@ -130,21 +130,21 @@
             left: -10px;
             bottom: -10px;
             background: linear-gradient(135deg, #4285f4 0%, #1a73e8 100%);
-            border-radius: 15px;
+            border-radius: 8px;
             z-index: -1;
             opacity: 0.8;
         }
         
         .header-image {
-            width: 280px;
+            width: 300px;
             height: auto;
-            border-radius: 10px;
+            border-radius: 8px;
             display: block;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
         }
         
         .section {
-            margin-bottom: 30px;
+            margin-bottom: 40px;
             position: relative;
         }
         
@@ -171,15 +171,15 @@
         }
         
         .section-title h3 {
-            font-size: 24px;
+            font-size: 28px;
             font-weight: 700;
             margin: 0;
         }
         
         .card {
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            background: #1e1e1e;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
             padding: 25px;
             position: relative;
             overflow: hidden;
@@ -188,7 +188,7 @@
         
         .card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
         }
         
         .card::before {
@@ -219,9 +219,9 @@
         }
         
         .benefit-card {
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            background: #1e1e1e;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
             padding: 20px;
             display: flex;
             align-items: flex-start;
@@ -230,7 +230,7 @@
         
         .benefit-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
         }
         
         .benefit-icon {
@@ -253,23 +253,24 @@
             font-size: 18px;
             font-weight: 600;
             margin: 0 0 8px 0;
-            color: #202124;
+            color: #ffffff;
         }
         
         .benefit-content p {
             margin: 0;
             font-size: 14px;
-            color: #5f6368;
+            color: #e0e0e0;
+            text-align: justify;
         }
         
         .inverter-section {
-            margin-bottom: 30px;
+            margin-bottom: 40px;
         }
         
         .inverter-description {
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            background: #1e1e1e;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
             padding: 25px;
             margin-bottom: 20px;
             position: relative;
@@ -300,16 +301,16 @@
         }
         
         .inverter-card {
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            background: #1e1e1e;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
             overflow: hidden;
             transition: all 0.3s ease;
         }
         
         .inverter-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
         }
         
         .inverter-card-header {
@@ -341,7 +342,7 @@
             width: 100%;
             height: 180px;
             object-fit: cover;
-            border-radius: 10px;
+            border-radius: 8px;
             margin-bottom: 15px;
         }
         
@@ -356,7 +357,7 @@
             align-items: flex-start;
             margin-bottom: 10px;
             font-size: 15px;
-            color: #5f6368;
+            color: #e0e0e0;
         }
         
         .feature-list .material-icons {
@@ -367,9 +368,9 @@
         }
         
         .comparison-table {
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            background: #1e1e1e;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
             overflow: hidden;
             margin-bottom: 30px;
         }
@@ -391,7 +392,7 @@
             padding: 15px;
             text-align: center;
             font-size: 15px;
-            border-bottom: 1px solid #f1f3f4;
+            border-bottom: 1px solid #333;
         }
         
         .comparison-table tr:last-child td {
@@ -399,7 +400,7 @@
         }
         
         .comparison-table tr:nth-child(even) {
-            background-color: #f8f9fa;
+            background-color: #252525;
         }
         
         .tag {
@@ -411,28 +412,28 @@
         }
         
         .tag-yes {
-            background-color: #e6f4ea;
-            color: #137333;
+            background-color: rgba(52,168,83,0.2);
+            color: #4caf50;
         }
         
         .tag-no {
-            background-color: #fce8e6;
-            color: #d93025;
+            background-color: rgba(244,67,54,0.2);
+            color: #f44336;
         }
         
         .tag-medium {
-            background-color: #fef7e0;
-            color: #b06000;
+            background-color: rgba(251,188,4,0.2);
+            color: #fbc02d;
         }
         
         .tag-low {
-            background-color: #e8f0fe;
-            color: #185abc;
+            background-color: rgba(66,133,244,0.2);
+            color: #4285f4;
         }
         
         .contact-section {
             background: linear-gradient(135deg, #4285f4 0%, #1a73e8 100%);
-            border-radius: 15px;
+            border-radius: 12px;
             box-shadow: 0 10px 30px rgba(66,133,244,0.3);
             padding: 30px;
             color: white;
@@ -464,7 +465,7 @@
         }
         
         .contact-title {
-            font-size: 24px;
+            font-size: 28px;
             font-weight: 700;
             margin-bottom: 10px;
             position: relative;
@@ -477,6 +478,7 @@
             opacity: 0.9;
             position: relative;
             z-index: 1;
+            text-align: justify;
         }
         
         .contact-info {
@@ -550,6 +552,28 @@
                 grid-template-columns: 1fr;
             }
         }
+        
+        /* Animation effects */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .card, .benefit-card, .inverter-card {
+            animation: fadeIn 0.8s ease-out;
+        }
+        
+        .section:nth-child(2) .card { animation-delay: 0.1s; }
+        .section:nth-child(3) .card { animation-delay: 0.2s; }
+        .section:nth-child(4) .benefit-card { animation-delay: 0.3s; }
+        .section:nth-child(5) .inverter-card { animation-delay: 0.4s; }
+        .section:nth-child(6) .inverter-card { animation-delay: 0.5s; }
+        
+        /* Justified text styling */
+        .justified-text {
+            text-align: justify;
+            text-justify: inter-word;
+        }
     </style>
 </head>
 <body>
@@ -580,7 +604,7 @@
                     <h3>معرفی شرکت پویش نیرو</h3>
                 </div>
                 <div class="card">
-                    <p>شرکت پویش نیرو پایا از سال ۱۳۷۶ فعالیت حرفه‌ای خود را با تمرکز بر تأمین و فروش تجهیزات پیشرفته اتوماسیون صنعتی، سیستم‌های کنترل دور موتور (اینورتر) و سیستم‌های خورشیدی آغاز کرده است. این شرکت با ارائه راهکارهای نوین در زمینه انرژی‌های تجدیدپذیر، به ویژه سیستم‌های خورشیدی، یکی از پیشگامان این صنعت در ایران محسوب می‌شود.</p>
+                    <p class="justified-text">شرکت پویش نیرو پایا از سال ۱۳۷۶ فعالیت حرفه‌ای خود را با تمرکز بر تأمین و فروش تجهیزات پیشرفته اتوماسیون صنعتی، سیستم‌های کنترل دور موتور (اینورتر) و سیستم‌های خورشیدی آغاز کرده است. این شرکت با ارائه راهکارهای نوین در زمینه انرژی‌های تجدیدپذیر، به ویژه سیستم‌های خورشیدی، یکی از پیشگامان این صنعت در ایران محسوب می‌شود.</p>
                 </div>
             </section>
             
@@ -596,17 +620,17 @@
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
                     <div class="card problem-card">
                         <h4 style="color: #ea4335; font-size: 18px; font-weight: 600; margin-bottom: 10px;">چالش بی برقی</h4>
-                        <p>قطعی برق یکی از بزرگترین چالش‌های در صنعت و مصارف خانگی است که می‌تواند باعث اختلال در فعالیت‌های روزمره و خسارات اقتصادی شود. راهکارهای سنتی مانند ژنراتورهای دیزلی با مشکلاتی مانند آلودگی محیط زیست، صدای زیاد و هزینه‌های نگهداری بالا همراه هستند.</p>
+                        <p class="justified-text">قطعی برق یکی از بزرگترین چالش‌های در صنعت و مصارف خانگی است که می‌تواند باعث اختلال در فعالیت‌های روزمره و خسارات اقتصادی شود. راهکارهای سنتی مانند ژنراتورهای دیزلی با مشکلاتی مانند آلودگی محیط زیست، صدای زیاد و هزینه‌های نگهداری بالا همراه هستند.</p>
                     </div>
                     
                     <div class="card solution-card">
                         <h4 style="color: #34a853; font-size: 18px; font-weight: 600; margin-bottom: 10px;">راهکارهای نوین</h4>
-                        <p>اینورترهای خورشیدی هیبریدی و آف گرید راهکارهای نوین، پاک و اقتصادی برای تأمین برق پایدار در شرایط بی برقی ارائه می‌دهند. این سیستم‌ها با استفاده از انرژی خورشیدی، استقلال انرژی را تضمین کرده و هزینه‌های انرژی را به طور چشمگیری کاهش می‌دهند.</p>
+                        <p class="justified-text">اینورترهای خورشیدی هیبریدی و آف گرید راهکارهای نوین، پاک و اقتصادی برای تأمین برق پایدار در شرایط بی برقی ارائه می‌دهند. این سیستم‌ها با استفاده از انرژی خورشیدی، استقلال انرژی را تضمین کرده و هزینه‌های انرژی را به طور چشمگیری کاهش می‌دهند.</p>
                     </div>
                 </div>
                 
                 <div style="text-align: center; margin: 20px 0;">
-                    <img src="https://sfile.chatglm.cn/images-ppt/f8eb67aaafb2.jpg" alt="سیستم تأمین برق خورشیدی" style="width: 90%; height: auto; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.15);">
+                    <img src="https://sfile.chatglm.cn/images-ppt/f8eb67aaafb2.jpg" alt="سیستم تأمین برق خورشیدی" style="width: 90%; height: auto; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.3);">
                 </div>
             </section>
             
@@ -626,7 +650,7 @@
                         </div>
                         <div class="benefit-content">
                             <h4>انرژی پاک و تجدیدپذیر</h4>
-                            <p>استفاده از انرژی خورشیدی به عنوان منبع پاک و تجدیدپذیر، کاهش آلودگی محیط زیست</p>
+                            <p class="justified-text">استفاده از انرژی خورشیدی به عنوان منبع پاک و تجدیدپذیر، کاهش آلودگی محیط زیست و کمک به حفظ منابع طبیعی برای نسل‌های آینده</p>
                         </div>
                     </div>
                     
@@ -636,7 +660,7 @@
                         </div>
                         <div class="benefit-content">
                             <h4>صرفه‌جویی در هزینه‌ها</h4>
-                            <p>کاهش چشمگیر هزینه‌های برق در بلندمدت و بازگشت سریع سرمایه</p>
+                            <p class="justified-text">کاهش چشمگیر هزینه‌های برق در بلندمدت و بازگشت سریع سرمایه با کاهش وابستگی به شبکه برق شهری</p>
                         </div>
                     </div>
                     
@@ -646,7 +670,7 @@
                         </div>
                         <div class="benefit-content">
                             <h4>استقلال انرژی</h4>
-                            <p>تأمین برق مستقل از شبکه شهری و مقاومت در برابر قطعی‌های برق</p>
+                            <p class="justified-text">تأمین برق مستقل از شبکه شهری و مقاومت در برابر قطعی‌های برق با ذخیره انرژی در باتری‌ها</p>
                         </div>
                     </div>
                     
@@ -656,7 +680,7 @@
                         </div>
                         <div class="benefit-content">
                             <h4>قابلیت اطمینان بالا</h4>
-                            <p>عملکرد پایدار و قابل اعتماد در شرایط مختلف آب و هوایی</p>
+                            <p class="justified-text">عملکرد پایدار و قابل اعتماد در شرایط مختلف آب و هوایی با تکنولوژی پیشرفته و کیفیت ساخت بالا</p>
                         </div>
                     </div>
                 </div>
@@ -672,7 +696,7 @@
                 </div>
                 
                 <div class="inverter-description hybrid-description">
-                    <p>اینورترهای هیبریدی ترکیبی از دو نوع آف‌گرید و آن‌گرید هستند و قابلیت اتصال هم‌زمان به پنل خورشیدی، باتری و شبکه برق شهری را دارند. این اینورترها می‌توانند انرژی خورشیدی اضافی را به باتری شارژ کنند و در شرایط بی برقی از انرژی ذخیره شده استفاده کنند.</p>
+                    <p class="justified-text">اینورترهای هیبریدی ترکیبی از دو نوع آف‌گرید و آن‌گرید هستند و قابلیت اتصال هم‌زمان به پنل خورشیدی، باتری و شبکه برق شهری را دارند. این اینورترها می‌توانند انرژی خورشیدی اضافی را به باتری شارژ کنند و در شرایط بی برقی از انرژی ذخیره شده استفاده کنند.</p>
                 </div>
                 
                 <div class="inverter-cards">
@@ -720,7 +744,7 @@
                 </div>
                 
                 <div class="inverter-description offgrid-description">
-                    <p>اینورترهای آف گرید (Off-grid) دستگاه‌هایی هستند که برق تولید شده توسط پنل‌های خورشیدی را به برق AC تبدیل می‌کنند و برای مصارف خانگی در مناطق بدون دسترسی به شبکه برق یا در شرایط بی برقی ایده‌آل هستند.</p>
+                    <p class="justified-text">اینورترهای آف گرید (Off-grid) دستگاه‌هایی هستند که برق تولید شده توسط پنل‌های خورشیدی را به برق AC تبدیل می‌کنند و برای مصارف خانگی در مناطق بدون دسترسی به شبکه برق یا در شرایط بی برقی ایده‌آل هستند.</p>
                 </div>
                 
                 <div class="inverter-cards">
@@ -807,7 +831,7 @@
             <section class="section">
                 <div class="contact-section">
                     <h3 class="contact-title">اطلاعات تماس و سفارش</h3>
-                    <p class="contact-subtitle">برای دریافت مشاوره رایگان و انتخاب بهترین راهکار تأمین برق اضطراری، با کارشناسان ما تماس بگیرید.</p>
+                    <p class="contact-subtitle">برای دریافت مشاوره رایگان و انتخاب بهترین راهکار تأمین برق اضطراری، با کارشناسان ما تماس بگیرید. تیم متخصص ما آماده ارائه راهکارهای متناسب با نیازهای شما در زمینه تأمین برق پایدار در شرایط بی برقی است.</p>
                     
                     <div class="contact-info">
                         <div class="contact-item">
